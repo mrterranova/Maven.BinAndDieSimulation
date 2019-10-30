@@ -14,7 +14,7 @@ public class Simulation {
     }
 
     //Create a simulation where two dies are thrown one million times.Keep track of all bins.
-    public void runSimulation() {
+    public void run() {
         Dice dice = new Dice(numOfDies);
         bins = new Bins(dice.getRollMin(), dice.getRollMax());
         for (int i = 0; i <= numberOfTosses; i++) {
