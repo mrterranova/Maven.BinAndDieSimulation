@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class GetRollMaxTest {
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void test1() {
         // given
         Integer numberOfFaces = 1;
@@ -21,7 +21,7 @@ public class GetRollMaxTest {
     }
 
 
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void test2() {
         // given
         Integer numberOfFaces = 2;

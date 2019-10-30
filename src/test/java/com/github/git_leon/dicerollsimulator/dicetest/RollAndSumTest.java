@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RollAndSumTest {
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void test0() {
         // given
         Integer min = 0;
@@ -80,7 +80,7 @@ public class RollAndSumTest {
         Assert.assertTrue(sum <= dice.getRollMax());
     }
 
-    @Test(expected = NegativeArraySizeException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void test5() {
         // given
         Integer min = Integer.MIN_VALUE;

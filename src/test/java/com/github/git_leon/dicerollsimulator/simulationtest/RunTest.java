@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
+import org.junit.runners.model.TestTimedOutException;
 
 public class RunTest {
     @Rule
@@ -49,23 +50,23 @@ public class RunTest {
         test(null, 1);
     }
 
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void test3() {
         test(0, null);
     }
 
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void test4() {
         test(0, 0);
     }
 
-    @Test(expected = OutOfMemoryError.class)
+    @Test(expected = TestTimedOutException.class)
     public void test5() {
         test(Integer.MAX_VALUE, Integer.MIN_VALUE);
     }
 
 
-    @Test(expected = NegativeArraySizeException.class)
+    @Test(expected = IndexOutOfBoundsException.class)
     public void test6() {
         test(Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
