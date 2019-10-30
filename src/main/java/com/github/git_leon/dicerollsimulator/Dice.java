@@ -1,7 +1,10 @@
 package com.github.git_leon.dicerollsimulator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Dice {
-    private final Die[] dice;
+    private final List<Die> dice;
 
     /**
      * @param numberOfDie - number of die-objects to be contained
@@ -15,12 +18,12 @@ public class Dice {
      * @param numberOfFaces - number of faces on a single die-object
      */
     public Dice(Integer numberOfDie, Integer numberOfFaces) {
-        this.dice = new Die[numberOfDie]; // create new array
+        this.dice = new ArrayList<>(); // create new list
 
         // populate array with new die objects
-        for (int currentIndex = 0; currentIndex < dice.length; currentIndex++) {// for every index
+        for (int currentIndex = 0; currentIndex < numberOfDie; currentIndex++) {// for every index
             Die die = new Die(numberOfFaces);// create a new die
-            dice[currentIndex] = die; // place the die into the array
+            dice.add(die); // place the die into the list
         }
     }
 
@@ -32,8 +35,8 @@ public class Dice {
         Integer total = 0;
 
         // for each of the die in the array
-        for (int currentIndex = 0; currentIndex < dice.length; currentIndex++) { // for every index
-            Die currentElement = dice[currentIndex]; // get current element
+        for (int currentIndex = 0; currentIndex < dice.size(); currentIndex++) { // for every index
+            Die currentElement = dice.get(currentIndex); // get current element
             currentElement.roll(); // roll die
             int theValueRolled = currentElement.getCurrentFaceValue(); // look at face of die
             total += theValueRolled; // add based on the value rolled
@@ -45,7 +48,7 @@ public class Dice {
      * @return the absolute minimum value that can be rolled by this set of die
      */
     public Integer getRollMin() {
-        Integer numberOfDie = dice.length;
+        Integer numberOfDie = dice.size();
         Integer minimumValueToBeRolled = numberOfDie;
         return minimumValueToBeRolled;
     }
@@ -54,9 +57,9 @@ public class Dice {
      * @return the absolute maximum value that can be rolled by this set of die
      */
     public Integer getRollMax() {
-        Die oneOfTheDie = dice[0]; // look at one of the die
+        Die oneOfTheDie = dice.get(0); // look at one of the die
         Integer numberOfFaces = oneOfTheDie.getNumberOfFaces(); // count number of faces
-        Integer numberOfDie = dice.length; // count number of die
+        Integer numberOfDie = dice.size(); // count number of die
         Integer maximumValueToBeRolled = numberOfFaces * numberOfDie;
         return maximumValueToBeRolled;
     }

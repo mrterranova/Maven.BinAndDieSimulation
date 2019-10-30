@@ -1,7 +1,10 @@
 package com.github.git_leon.dicerollsimulator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bins {
-    private final Bin[] bins;
+    private final List<Bin> bins;
 
     public Bins() {
         this(1, 12);
@@ -9,10 +12,10 @@ public class Bins {
 
     public Bins(Integer minFaceValue, Integer maxFaceValue) {
         Integer numberOfBins = maxFaceValue - minFaceValue;
-        this.bins = new Bin[numberOfBins];
-        for (int currentIndex = 0; currentIndex < bins.length; currentIndex++) {
+        this.bins = new ArrayList<>();
+        for (int currentIndex = 0; currentIndex < numberOfBins; currentIndex++) {
             Integer currentValue = minFaceValue + currentIndex;
-            bins[currentIndex] = new Bin(currentValue);
+            bins.add(new Bin(currentValue));
         }
     }
 
@@ -22,8 +25,8 @@ public class Bins {
     }
 
     public Bin getBin(Integer faceValueToIncrement) {
-        for (int currentIndex = 0; currentIndex < bins.length; currentIndex++) {
-            Bin currentBin = bins[currentIndex];
+        for (int currentIndex = 0; currentIndex < bins.size(); currentIndex++) {
+            Bin currentBin = bins.get(currentIndex);
             if(currentBin.getFaceValueToTrack().equals(faceValueToIncrement)) {
                 return currentBin;
             }
@@ -32,6 +35,6 @@ public class Bins {
     }
 
     public Bin[] getBins() {
-        return bins;
+        return bins.toArray(new Bin[0]);
     }
 }
