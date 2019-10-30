@@ -4,6 +4,7 @@ import com.github.git_leon.dicerollsimulator.Bins;
 import org.junit.Assert;
 import org.junit.Test;
 
+@Deprecated
 public class GetBinTest {
     @Test(expected = NullPointerException.class)
     public void test1() {

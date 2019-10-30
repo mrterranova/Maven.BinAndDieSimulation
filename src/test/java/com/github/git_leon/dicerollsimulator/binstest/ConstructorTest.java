@@ -39,6 +39,7 @@ public class ConstructorTest {
     }
 
 
+    @Deprecated
     @Test(expected = NegativeArraySizeException.class)
     public void test4() {
         // given
@@ -51,6 +52,7 @@ public class ConstructorTest {
     }
 
 
+    @Deprecated
     @Test(expected = NegativeArraySizeException.class)
     public void test5() {
         // given

@@ -22,7 +22,7 @@ public class Bins {
 
     public void incrementBin(Integer faceValueToIncrement) {
         Integer numberOfOccurrences = getBin(faceValueToIncrement);
-        bins.put(faceValueToIncrement, numberOfOccurrences);
+        bins.put(faceValueToIncrement, numberOfOccurrences+1);
     }
 
     public Integer getBin(Integer faceValueToIncrement) {
