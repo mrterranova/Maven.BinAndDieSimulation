@@ -40,7 +40,6 @@ public class Simulation {
             Integer numberOfOccurrences = bin.getNumberOfOccurrences();
             Double percentage = getPercentageOfOccurrences(faceValue);
 
-
             // formatting string
             Integer starCount = percentage.intValue();
             String stars = new String(new char[starCount]).replace("\0", "*");
