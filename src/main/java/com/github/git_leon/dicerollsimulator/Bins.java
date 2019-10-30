@@ -1,7 +1,11 @@
-package com.github.zipcodewilmington;
+package com.github.git_leon.dicerollsimulator;
 
 public class Bins {
     private final Bin[] bins;
+
+    public Bins() {
+        this(1, 12);
+    }
 
     public Bins(Integer minFaceValue, Integer maxFaceValue) {
         Integer numberOfBins = maxFaceValue - minFaceValue;

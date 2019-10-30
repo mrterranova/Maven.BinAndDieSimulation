@@ -1,4 +1,4 @@
-package com.github.zipcodewilmington;
+package com.github.git_leon.dicerollsimulator;
 
 public class MainApplication {
     public static void main(String[] args) {

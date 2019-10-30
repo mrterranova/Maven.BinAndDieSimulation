@@ -1,4 +1,4 @@
-package com.github.zipcodewilmington;
+package com.github.git_leon.dicerollsimulator;
 
 public class Bin {
     private Integer faceValueToTrack;

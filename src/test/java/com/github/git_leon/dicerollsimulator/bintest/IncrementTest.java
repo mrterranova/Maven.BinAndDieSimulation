@@ -1,6 +1,6 @@
-package com.github.zipcodewilmington.bintest;
+package com.github.git_leon.dicerollsimulator.bintest;
 
-import com.github.zipcodewilmington.Bin;
+import com.github.git_leon.dicerollsimulator.Bin;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,9 +8,8 @@ public class IncrementTest {
     @Test
     public void test1() {
         // given
-        Integer faceValue = null;
+        Bin bin = new Bin(null);
         Integer expectedNumberOfOccurrences = 1;
-        Bin bin = new Bin(faceValue);
 
         // when
         bin.increment();
@@ -23,9 +22,8 @@ public class IncrementTest {
     @Test
     public void test2() {
         // given
-        Integer faceValue = null;
+        Bin bin = new Bin(null);
         Integer expectedNumberOfOccurrences = 2;
-        Bin bin = new Bin(faceValue);
 
         // when
         bin.increment();
@@ -40,9 +38,8 @@ public class IncrementTest {
     @Test
     public void test3() {
         // given
-        Integer faceValue = null;
+        Bin bin = new Bin(null);
         Integer expectedNumberOfOccurrences = 3;
-        Bin bin = new Bin(faceValue);
 
         // when
         bin.increment();

@@ -1,6 +1,6 @@
-package com.github.zipcodewilmington.bintest;
+package com.github.git_leon.dicerollsimulator.bintest;
 
-import com.github.zipcodewilmington.Bin;
+import com.github.git_leon.dicerollsimulator.Bin;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,7 +21,6 @@ public class ConstructorTest {
     public void test3() {
         test(3);
     }
-
 
     @Test
     public void test4() {

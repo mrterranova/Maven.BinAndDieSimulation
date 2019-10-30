@@ -1,6 +1,6 @@
-package com.github.zipcodewilmington.dietest;
+package com.github.git_leon.dicerollsimulator.dietest;
 
-import com.github.zipcodewilmington.Die;
+import com.github.git_leon.dicerollsimulator.Die;
 import org.junit.Assert;
 import org.junit.Test;
 
