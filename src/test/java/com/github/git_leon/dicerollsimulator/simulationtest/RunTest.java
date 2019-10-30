@@ -4,9 +4,14 @@ import com.github.git_leon.dicerollsimulator.Bin;
 import com.github.git_leon.dicerollsimulator.Bins;
 import com.github.git_leon.dicerollsimulator.Simulation;
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
 
 public class RunTest {
+    @Rule
+    public Timeout globalTimeout= new Timeout(5000);
+
     private void test(Integer numberOfDie, Integer numberOfTosses) {
         // given
         Simulation simulation = new Simulation(numberOfDie, numberOfTosses);
