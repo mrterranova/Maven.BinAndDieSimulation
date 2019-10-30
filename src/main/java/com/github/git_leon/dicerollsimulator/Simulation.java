@@ -17,7 +17,7 @@ public class Simulation {
     public void run() {
         Dice dice = new Dice(numberOfDie);
         bins = new Bins(dice.getRollMin(), dice.getRollMax());
-        for (int i = 0; i <= numberOfTosses; i++) {
+        for (int currentTossNumber = 0; currentTossNumber < numberOfTosses; currentTossNumber++) {
             Integer faceValue = dice.rollAndSum();
             bins.incrementBin(faceValue);
         }
@@ -47,5 +47,9 @@ public class Simulation {
             outPut.format("%d : %d: %.2f: %s%n", faceValue, numberOfOccurrences, percentage, stars);
         }
         return outPut.toString();
+    }
+
+    public Bins getBins() {
+        return bins;
     }
 }
