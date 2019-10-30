@@ -3,10 +3,6 @@ package com.github.zipcodewilmington;
 public class Bins {
     private final Bin[] bins;
 
-    /**
-     * Note to self could refactor to make hashmap private by creating a method that returns the keys and one that
-     * returns the values
-     */
     public Bins(Integer minFaceValue, Integer maxFaceValue) {
         Integer numberOfBins = maxFaceValue - minFaceValue;
         this.bins = new Bin[numberOfBins];

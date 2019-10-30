@@ -6,6 +6,10 @@ public class Die {
     private Integer numberOfFaces;
     private Integer currentFaceValue;
 
+    public Die() {
+        this(6);
+    }
+
     public Die(Integer numberOfFaces) {
         this.numberOfFaces = numberOfFaces;
     }
