@@ -28,7 +28,7 @@ public class Dice {
      * Create a random number from 1 to 6 for each dice you roll
      * sum all of the random numbers up and that equals total for that roll
      */
-    public int tossAndSum() {
+    public Integer rollAndSum() {
         Integer total = 0;
 
         // for each of the die in the array

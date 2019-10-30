@@ -18,7 +18,7 @@ public class Simulation {
         Dice dice = new Dice(numOfDies);
         bins = new Bins(dice.getRollMin(), dice.getRollMax());
         for (int i = 0; i <= numberOfTosses; i++) {
-            Integer faceValue = dice.tossAndSum();
+            Integer faceValue = dice.rollAndSum();
             bins.incrementBin(faceValue);
         }
     }
