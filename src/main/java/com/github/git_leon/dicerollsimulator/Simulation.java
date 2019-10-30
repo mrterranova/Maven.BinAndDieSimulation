@@ -3,19 +3,19 @@ package com.github.git_leon.dicerollsimulator;
 import java.util.Formatter;
 
 public class Simulation {
-    private int numOfDies;
-    private int numberOfTosses;
+    private Integer numberOfDie;
+    private Integer numberOfTosses;
     private Bins bins;
 
 
-    public Simulation(int numOfDies, int numberOfTosses) {
-        this.numOfDies = numOfDies;
+    public Simulation(Integer numberOfDie, Integer numberOfTosses) {
+        this.numberOfDie = numberOfDie;
         this.numberOfTosses = numberOfTosses;
     }
 
     //Create a simulation where two dies are thrown one million times.Keep track of all bins.
     public void run() {
-        Dice dice = new Dice(numOfDies);
+        Dice dice = new Dice(numberOfDie);
         bins = new Bins(dice.getRollMin(), dice.getRollMax());
         for (int i = 0; i <= numberOfTosses; i++) {
             Integer faceValue = dice.rollAndSum();
