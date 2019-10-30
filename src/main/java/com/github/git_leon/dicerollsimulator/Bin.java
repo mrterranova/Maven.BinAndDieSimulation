@@ -1,5 +1,6 @@
 package com.github.git_leon.dicerollsimulator;
 
+@Deprecated
 public class Bin {
     private Integer faceValueToTrack;
     private Integer numberOfOccurrences;

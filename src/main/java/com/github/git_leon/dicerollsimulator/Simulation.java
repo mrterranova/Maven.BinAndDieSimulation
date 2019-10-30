@@ -24,8 +24,7 @@ public class Simulation {
     }
 
     public Double getPercentageOfOccurrences(Integer faceValueToCheck) {
-        Bin bin = bins.getBin(faceValueToCheck);
-        Integer numberOfOccurrences = bin.getNumberOfOccurrences();
+        Integer numberOfOccurrences = bins.getBin(faceValueToCheck);
         Double ratio = numberOfOccurrences.doubleValue() / numberOfTosses;
         Double percentage = ratio * 100;
         return percentage;
@@ -34,17 +33,16 @@ public class Simulation {
     @Override
     public String toString() {
         Formatter outPut = new Formatter();
-        for(Bin bin : bins.getBins()) {
+        for(Integer faceValueToTrack : bins.getBins()) {
             // doing math
-            Integer faceValue = bin.getFaceValueToTrack();
-            Integer numberOfOccurrences = bin.getNumberOfOccurrences();
-            Double percentage = getPercentageOfOccurrences(faceValue);
+            Integer numberOfOccurrences = bins.getBin(faceValueToTrack);
+            Double percentage = getPercentageOfOccurrences(faceValueToTrack);
 
 
             // formatting string
             Integer starCount = percentage.intValue();
             String stars = new String(new char[starCount]).replace("\0", "*");
-            outPut.format("%d : %d: %.2f: %s%n", faceValue, numberOfOccurrences, percentage, stars);
+            outPut.format("%d : %d: %.2f: %s%n", faceValueToTrack, numberOfOccurrences, percentage, stars);
         }
         return outPut.toString();
     }

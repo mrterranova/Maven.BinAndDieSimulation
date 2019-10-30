@@ -1,7 +1,10 @@
 package com.github.git_leon.dicerollsimulator;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Bins {
-    private final Bin[] bins;
+    private final Map<Integer, Integer> bins;
 
     public Bins() {
         this(1, 12);
@@ -9,29 +12,24 @@ public class Bins {
 
     public Bins(Integer minFaceValue, Integer maxFaceValue) {
         Integer numberOfBins = maxFaceValue - minFaceValue;
-        this.bins = new Bin[numberOfBins];
-        for (int currentIndex = 0; currentIndex < bins.length; currentIndex++) {
+        this.bins = new HashMap<>();
+        for (int currentIndex = 0; currentIndex < numberOfBins; currentIndex++) {
             Integer currentValue = minFaceValue + currentIndex;
-            bins[currentIndex] = new Bin(currentValue);
+            Integer numberOfOccurrences = 0;
+            bins.put(currentValue, numberOfOccurrences);
         }
     }
 
     public void incrementBin(Integer faceValueToIncrement) {
-        Bin bin = getBin(faceValueToIncrement);
-        bin.increment();
+        Integer numberOfOccurrences = getBin(faceValueToIncrement);
+        bins.put(faceValueToIncrement, numberOfOccurrences);
     }
 
-    public Bin getBin(Integer faceValueToIncrement) {
-        for (int currentIndex = 0; currentIndex < bins.length; currentIndex++) {
-            Bin currentBin = bins[currentIndex];
-            if(currentBin.getFaceValueToTrack().equals(faceValueToIncrement)) {
-                return currentBin;
-            }
-        }
-        return null;
+    public Integer getBin(Integer faceValueToIncrement) {
+        return bins.get(faceValueToIncrement);
     }
 
-    public Bin[] getBins() {
-        return bins;
+    public Integer[] getBins() {
+        return bins.keySet().toArray(new Integer[0]);
     }
 }

@@ -1,6 +1,5 @@
 package com.github.git_leon.dicerollsimulator.binstest;
 
-import com.github.git_leon.dicerollsimulator.Bin;
 import com.github.git_leon.dicerollsimulator.Bins;
 import org.junit.Assert;
 import org.junit.Test;
@@ -38,8 +37,7 @@ public class IncrementBinTest {
     private void test(Integer numberOfIncrements, Integer faceValueToIncrement) {
         // given
         Bins bins = new Bins();
-        Bin selectedBin = bins.getBin(faceValueToIncrement);
-        Integer preIncrementValue = selectedBin.getNumberOfOccurrences();
+        Integer preIncrementValue = bins.getBin(faceValueToIncrement);
         Integer postIncrementValue = preIncrementValue + numberOfIncrements;
         Integer expected = postIncrementValue - preIncrementValue;
 
@@ -49,7 +47,7 @@ public class IncrementBinTest {
         }
 
         // then
-        Integer actual = selectedBin.getNumberOfOccurrences();
+        Integer actual = bins.getBin(faceValueToIncrement);
         Assert.assertEquals(expected, actual);
     }
 }

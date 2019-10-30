@@ -1,6 +1,5 @@
 package com.github.git_leon.dicerollsimulator.simulationtest;
 
-import com.github.git_leon.dicerollsimulator.Bin;
 import com.github.git_leon.dicerollsimulator.Bins;
 import com.github.git_leon.dicerollsimulator.Simulation;
 import org.junit.Assert;
@@ -14,13 +13,13 @@ public class RunTest {
         // when
         simulation.run();
         Bins bins = simulation.getBins();
-        Bin[] binArray = bins.getBins();
+        Integer[] binArray = bins.getBins();
 
         // then
         Integer totalNumberOfOccurrences = 0;
         for (int currentIndex = 0; currentIndex < binArray.length; currentIndex++) {
-            Bin bin = binArray[currentIndex];
-            Integer numberOfOccurrences = bin.getNumberOfOccurrences();
+            Integer bin = binArray[currentIndex];
+            Integer numberOfOccurrences = bins.getBin(bin);
             totalNumberOfOccurrences += numberOfOccurrences;
         }
 

@@ -1,6 +1,5 @@
 package com.github.git_leon.dicerollsimulator.binstest;
 
-import com.github.git_leon.dicerollsimulator.Bin;
 import com.github.git_leon.dicerollsimulator.Bins;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,11 +12,7 @@ public class GetBinTest {
         Integer expected = null;
 
         // when
-        Bin bin = bins.getBin(expected);
-        Integer actual = bin.getFaceValueToTrack();
-
-        // then
-        Assert.assertEquals(expected, actual);
+        Integer bin = bins.getBin(expected);
     }
 
 
@@ -28,8 +23,7 @@ public class GetBinTest {
         Integer expected = 1;
 
         // when
-        Bin bin = bins.getBin(expected);
-        Integer actual = bin.getFaceValueToTrack();
+        Integer actual = bins.getBin(expected);
 
         // then
         Assert.assertEquals(expected, actual);
@@ -43,8 +37,7 @@ public class GetBinTest {
         Integer expected = 2;
 
         // when
-        Bin bin = bins.getBin(expected);
-        Integer actual = bin.getFaceValueToTrack();
+        Integer actual = bins.getBin(expected);
 
         // then
         Assert.assertEquals(expected, actual);
@@ -58,8 +51,7 @@ public class GetBinTest {
         Integer expected = 3;
 
         // when
-        Bin bin = bins.getBin(expected);
-        Integer actual = bin.getFaceValueToTrack();
+        Integer actual = bins.getBin(expected);
 
         // then
         Assert.assertEquals(expected, actual);
