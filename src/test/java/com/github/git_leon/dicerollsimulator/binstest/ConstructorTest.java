@@ -1,123 +1,71 @@
 package com.github.git_leon.dicerollsimulator.binstest;
 
 import com.github.git_leon.dicerollsimulator.Bins;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class ConstructorTest {
+    private void test(Integer minFaceValue, Integer maxFaceValue) {
+        Bins bins = new Bins(minFaceValue, maxFaceValue);
+        Assert.assertNotNull(bins.getBins());
+    }
+
     @Test(expected = NullPointerException.class)
     public void test1() {
-        // given
-        Integer minFaceValue = null;
-        Integer maxFaceValue = minFaceValue;
-
-        // when
-        new Bins(minFaceValue, maxFaceValue);
+        test(null, null);
     }
 
 
     @Test(expected = NullPointerException.class)
     public void test2() {
-        // given
-        Integer minFaceValue = null;
-        Integer maxFaceValue = 1;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(null, 1);
     }
 
 
     @Test(expected = NullPointerException.class)
     public void test3() {
-        // given
-        Integer minFaceValue = 1;
-        Integer maxFaceValue = null;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(1, null);
     }
 
 
     @Test(expected = NegativeArraySizeException.class)
     public void test4() {
-        // given
-        Integer minFaceValue = 2;
-        Integer maxFaceValue = 1;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(2, 1);
     }
 
 
     @Test(expected = NegativeArraySizeException.class)
     public void test5() {
-        // given
-        Integer minFaceValue = 3;
-        Integer maxFaceValue = 2;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(3, 2);
     }
 
     @Test
     public void test6() {
         // given
-        Integer minFaceValue = 1;
-        Integer maxFaceValue = minFaceValue;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(1, 1);
     }
 
 
     @Test
     public void test7() {
-        // given
-        Integer minFaceValue = 2;
-        Integer maxFaceValue = minFaceValue;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(2,2);
     }
 
-    
+
     @Test
     public void test8() {
-        // given
-        Integer minFaceValue = 1;
-        Integer maxFaceValue = 2;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(1,2);
     }
 
 
     @Test
     public void test9() {
-        // given
-        Integer minFaceValue = 1;
-        Integer maxFaceValue = 3;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(1,3);
     }
 
     @Test
     public void test10() {
-        // given
-        Integer minFaceValue = 2;
-        Integer maxFaceValue = 3;
-
-        // when
-        // then
-        new Bins(minFaceValue, maxFaceValue);
+        test(2,3);
     }
 
 }

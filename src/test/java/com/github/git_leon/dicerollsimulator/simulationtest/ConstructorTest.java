@@ -15,7 +15,7 @@ public class ConstructorTest {
         Simulation simulation = new Simulation(numberOfDie, numberOfTosses);
 
         // then
-        Assert.assertNotNull(simulation);
+        Assert.assertNotNull(simulation.getBins());
     }
 
     @Test
@@ -28,7 +28,7 @@ public class ConstructorTest {
         Simulation simulation = new Simulation(numberOfDie, numberOfTosses);
 
         // then
-        Assert.assertNotNull(simulation);
+        Assert.assertNotNull(simulation.getBins());
     }
 
     @Test
@@ -41,7 +41,7 @@ public class ConstructorTest {
         Simulation simulation = new Simulation(numberOfDie, numberOfTosses);
 
         // then
-        Assert.assertNotNull(simulation);
+        Assert.assertNotNull(simulation.getBins());
     }
 
     @Test
@@ -54,7 +54,7 @@ public class ConstructorTest {
         Simulation simulation = new Simulation(numberOfDie, numberOfTosses);
 
         // then
-        Assert.assertNotNull(simulation);
+        Assert.assertNotNull(simulation.getBins());
     }
 
     @Test
@@ -67,6 +67,6 @@ public class ConstructorTest {
         Simulation simulation = new Simulation(numberOfDie, numberOfTosses);
 
         // then
-        Assert.assertNotNull(simulation);
+        Assert.assertNotNull(simulation.getBins());
     }
 }
