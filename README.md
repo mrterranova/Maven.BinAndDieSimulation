@@ -1,6 +1,6 @@
 # Bin and Die Simulation
 
-* **Objective:** To create a simulation of `Die` being rolled and placed into a `Bin` which keeps track of the number of times a particular face-value has occurred. 
+* **Objective:** To create a simulation of `Die` being rolled and evaluated by a `Bin` which keeps track of the number of times a particular face-value has occurred. 
 * **Purpose:** To establish familiarity with composition of array objects.
 
 ### Overview
