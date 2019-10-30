@@ -24,7 +24,7 @@ public class RunTest {
             totalNumberOfOccurrences += numberOfOccurrences;
         }
 
-        // ensure number of total occurrences is equal to number of total tosses
+        //  ensure number of total occurrences is equal to number of total tosses
         Assert.assertEquals(numberOfTosses, totalNumberOfOccurrences);
     }
 
