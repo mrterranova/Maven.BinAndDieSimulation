@@ -14,11 +14,11 @@
 ### Project Instructions
 * Within each class are several methods which must be defined to pass test cases.
 * Each method has a respective Test class. For example:
-  * `new Bin()` constructor can be tested by running the `bintest.ConstructorTest` class.
-  * `Bins.incrementBin(Integer)` constructor can be tested by running the `binstest.IncrementBinTest` class.
-  * `Die.roll()` method can be tested by running the `dietest.RollTest` class.
-  * `Dice.rollAndSum()`method can be tested by running the `dicetest.ConstructorTest` class.
-  * `Simulation.run()` method can be tested by running the `simulation.RunTest` class.
+  * `new Bin()` can be tested by running the `bintest.ConstructorTest` class.
+  * `Bins.incrementBin(Integer)` can be tested by running the `binstest.IncrementBinTest` class.
+  * `Die.roll()` can be tested by running the `dietest.RollTest` class.
+  * `Dice.rollAndSum()` can be tested by running the `dicetest.ConstructorTest` class.
+  * `Simulation.run()` can be tested by running the `simulation.RunTest` class.
 * **Ensure that each test-case of each test-class passes with 100% success rate.**
   
 ### Getting Started
