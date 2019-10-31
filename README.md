@@ -78,16 +78,20 @@
 * Create readable output to display distributions of occurrences by `@Override`ing the `toString()` method in `Simulation`.
 
 
-* Sample Script
+* Sample Program
 
 ```java
-Simulation simulation = new Simulation(2, 1000000);
-simulation.run();
-String results = simulation.toString();
-System.out.println(results);
+class MainApplication {
+	public static void main(String[] args) {
+		Simulation simulation = new Simulation(2, 1000000);
+		simulation.run();
+		String results = simulation.toString();
+		System.out.println(results);
+	}
+}
 ```
 
-* Sample Script Output
+* Sample Program Output
 
 ```java
 ***
