@@ -1,6 +1,8 @@
 package com.github.git_leon.dicerollsimulator.binstest;
 
+import com.github.git_leon.dicerollsimulator.Bin;
 import com.github.git_leon.dicerollsimulator.Bins;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class ConstructorTest {
@@ -116,8 +118,14 @@ public class ConstructorTest {
         Integer maxFaceValue = 3;
 
         // when
+        Bins bins = new Bins(minFaceValue, maxFaceValue);
+
         // then
-        new Bins(minFaceValue, maxFaceValue);
+        for (Integer expectedFaceValue = minFaceValue; expectedFaceValue < maxFaceValue; expectedFaceValue++) {
+            Bin bin = bins.getBin(expectedFaceValue);
+            Integer actualFaceValue = bin.getFaceValueToTrack();
+            Assert.assertEquals(expectedFaceValue, actualFaceValue);
+        }
     }
 
 }
