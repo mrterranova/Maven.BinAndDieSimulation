@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class NullaryConstructorTest {
+    private Integer numberOfFaces;
+
     @Test
     public void test1() {
         // given
